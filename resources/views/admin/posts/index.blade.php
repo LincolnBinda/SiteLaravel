@@ -1,3 +1,8 @@
+@extends('admin.layouts.app')
+
+@section('title', 'Listagem dos Posts')
+
+@section('content')
 <form action="{{ route('posts.search') }}" method="post">
     @csrf
     <input type="text" name="search" placeholder="Pesquisar">
@@ -32,3 +37,5 @@
 @else
     {{ $posts->links() }}
 @endif
+
+@endsection
